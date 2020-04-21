@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MCPILib</name>
+    </assembly>
+    <members>
+        <member name="T:MCPI.MCPI">
+            <summary>
+             Server Ports for Small Basic
+            </summary>
+        </member>
+        <member name="M:MCPI.MCPI.connectRemote(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+             connectRemote Rpi
+            </summary>
+            <param name="message">
+             message
+            </param>
+            <param name="address">
+             Remote IP address 
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.PrintMessage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+             PrintMessage
+            </summary>
+            <param name="message">
+             message
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.CountDown(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+             CountDown 
+              wait x sec  
+            </summary>
+            <param name="CountSec">
+              CountSec
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.SetBlock(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+             SetBlock
+            </summary>
+            <param name="x">
+              BeforeGrand ID
+            </param>
+            <param name="y">
+              BeforeGrand ID
+            </param>
+            <param name="z">
+              BeforeGrand ID
+            </param>
+            <param name="Block">
+              BeforeGrand ID
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.ZTest">
+            <summary>
+             test2
+            </summary>
+        </member>
+        <member name="M:MCPI.MCPI.TipsOnTheBlock(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            (TBD)
+             TipsOntheBlock
+            </summary>
+            <param name="BLOCK">
+              BLOCK ID
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.TipsSmokeOnTheWater">
+            <summary>
+            (TBD)
+             TipsSmokeOnTheWater
+            </summary>
+        </member>
+        <member name="M:MCPI.MCPI.ExGoToHeaven">
+            <summary>
+             ExGotoHeaven      
+             After 10 seconds...
+            </summary>
+        </member>
+        <member name="M:MCPI.MCPI.ExTheWall(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+             ExTheWall
+             
+            </summary>
+            <param name="width">
+              width
+            </param>
+            <param name="height">
+              height
+            </param>
+            <param name="BLOCK">
+              block ID
+            </param>
+            <param name="xz">
+              xz  select "x" or "z"
+              X direction wall
+              Z direction wall
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.ExIntoTheUnderGroud(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+             ExIntoTheUnderGroud
+             Let's mining 
+            </summary>
+            <param name="BeforeGrand">
+              BeforeGrand ID (0  -  5)
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.ExSpiralStaircase(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+              ExSpiralStaircase 
+              make a Spiral Staircase
+            </summary>
+            <param name="CountToSky">
+              Loop Num
+            </param>
+            <param name="StartPosition">
+              Loop StartPosition
+            </param>
+        </member>
+        <member name="M:MCPI.MCPI.ExIWishATower(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+              ExIWishATower
+              make a tower 
+            </summary>
+            <param name="Height">
+              Height
+            </param>
+            <param name="Hall">
+              Hall (0 - 2)
+            </param>
+            <param name="Block">
+              Block Types
+            </param>
+        </member>
+        <member name="P:MCPI.MCPI.Version">
+            <summary><para>
+             Version
+            </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLK_AIR">
+            <summary><para>  AIR 0 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLK_LAVA">
+            <summary><para>  LAVA 10 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLK_TNT">
+            <summary><para>  TNT 46 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLK_WATER">
+            <summary><para>  WATER 8 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLK_DIRT">
+            <summary><para>  DIRT 3 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLKORE_GOLD_ORE">
+            <summary><para>  GOLD_ORE 14 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLKORE_IRON_ORE">
+            <summary><para>  IRON_ORE 15 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLKORE_COAL_ORE">
+            <summary><para>  COAL_ORE 16 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLKORE_LAPIS_LAZULI_ORE">
+            <summary><para>  LAPIS_LAZULI_ORE 21 </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLOCK_LAPIS_LAZULI_BLOCK">
+            <summary><para> LAPIS_LAZULI_BLOCK   =  22;  </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLOCK_GOLD_BLOCK">
+            <summary><para> GOLD_BLOCK           =  41;  </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLOCK_IRON_BLOCK">
+            <summary><para> IRON_BLOCK           =  42;  </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLOCK_BRICK_BLOCK">
+            <summary><para> BRICK_BLOCK          =  45;  </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLOCK_DIAMOND_BLOCK">
+            <summary><para> DIAMOND_BLOCK        =  57;  </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLOCK_SNOW_BLOCK">
+            <summary><para> SNOW_BLOCK           =  80;  </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.BLOCK_GLOWSTONE_BLOCK">
+            <summary><para> GLOWSTONE_BLOCK      =  89;  </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.Px">
+            <summary><para>
+             Px
+            </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.Py">
+            <summary><para>
+             Py
+            </para></summary>
+        </member>
+        <member name="P:MCPI.MCPI.Pz">
+            <summary><para>
+             Pz
+            </para></summary>
+        </member>
+        <member name="T:MCPI.MCPI.BLK">
+            <summary>
+             BLK
+            </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.AIR">
+            <summary>  AIR </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.STONE">
+            <summary>  STONE </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GRASS">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.DIRT">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.COBBLESTONE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.WOOD_PLANKS">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.SAPLING">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.BEDROCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.WATER_FLOWING">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.WATER">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.WATER_STATIONARY">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.LAVA_FLOWING">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.LAVA">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.LAVA_STATIONARY">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.SAND">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GRAVEL">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GOLD_ORE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.IRON_ORE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.COAL_ORE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.WOOD">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.LEAVES">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GLASS">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.LAPIS_LAZULI_ORE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.LAPIS_LAZULI_BLOCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.SANDSTONE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.BED">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.COBWEB">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GRASS_TALL">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.WOOL">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FLOWER_YELLOW">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FLOWER_CYAN">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.MUSHROOM_BROWN">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.MUSHROOM_RED">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GOLD_BLOCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.IRON_BLOCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.STONE_SLAB_DOUBLE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.STONE_SLAB">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.BRICK_BLOCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.TNT">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.BOOKSHELF">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.MOSS_STONE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.OBSIDIAN">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.TORCH">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FIRE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.STAIRS_WOOD">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.CHEST">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.DIAMOND_ORE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.DIAMOND_BLOCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.CRAFTING_TABLE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FARMLAND">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FURNACE_INACTIVE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FURNACE_ACTIVE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.DOOR_WOOD">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.LADDER">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.STAIRS_COBBLESTONE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.DOOR_IRON">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.REDSTONE_ORE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.SNOW">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.ICE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.SNOW_BLOCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.CACTUS">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.CLAY">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.SUGAR_CANE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FENCE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GLOWSTONE_BLOCK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.BEDROCK_INVISIBLE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.STONE_BRICK">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GLASS_PANE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.MELON">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.FENCE_GATE">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.GLOWING_OBSIDIAN">
+            <summary>  BLOCK </summary>
+        </member>
+        <member name="F:MCPI.MCPI.BLK.NETHER_REACTOR_CORE">
+            <summary>  BLOCK </summary>
+        </member>
+    </members>
+</doc>

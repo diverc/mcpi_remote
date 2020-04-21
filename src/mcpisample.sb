@@ -1,0 +1,133 @@
+GraphicsWindow.Title = "遠隔操作でちょっかいをだすアプリ for MinecraftPI " 
+
+InitForm()
+Controls.ButtonClicked=OnButtonClicked
+GraphicsWindow.MouseDown = OnMouseDown
+
+Sub InitForm
+  GraphicsWindow.Width = 600
+  GraphicsWindow.Height = 600
+  GraphicsWindow.FontName = "Segoe UI Symbol"
+  GraphicsWindow.FontSize = 20
+  GraphicsWindow.CanResize= "False"
+  GraphicsWindow.Top = 0
+  GraphicsWindow.Show()
+
+  Text[1] = Shapes.AddText("①RPIのIPアドレスを入力：")
+  Shapes.Move(Text[1],1,0)
+
+  IPADDR = Controls.AddTextBox(300,00)
+  Controls.SetSize(IPADDR,200,50)
+  Controls.SetTextBoxText(IPADDR,"192.168.0.11")
+  
+  connect_button = Controls.AddButton("接続", 500, 00)
+  Controls.SetSize(connect_button, 100, 50)
+
+  Text[2] = Shapes.AddText("②遠隔操作を実行：")
+  Shapes.Move(Text[2],1,100)
+  
+  button[1] = Controls.AddButton("現在座標取得",50,150)
+  Controls.SetSize(button[1],150,50)
+  
+  Tx = Controls.AddTextBox(200,150)
+  Controls.SetSize(Tx,80,50)
+  Controls.SetTextBoxText(Tx,"999")
+
+  Ty = Controls.AddTextBox(290,150)
+  Controls.SetSize(Ty,80,50)
+  Controls.SetTextBoxText(Ty,"0")
+
+  Tz = Controls.AddTextBox(380,150)
+  Controls.SetSize(Tz,80,50)
+  Controls.SetTextBoxText(Tz,"99")
+  
+  button[2] = Controls.AddButton("テレポート",450,150)
+  Controls.SetSize(button[2],150,50)
+  
+  button[3] = Controls.AddButton("天空へ",50,350)
+  Controls.SetSize(button[3],150,50)
+
+  button[4] = Controls.AddButton("地下迷宮",250,350)
+  Controls.SetSize(button[4],150,50)
+
+  button[5] = Controls.AddButton("螺旋階段",450,350)
+  Controls.SetSize(button[5],150,50)
+
+  button[6] = Controls.AddButton("噴水",50,450)
+  Controls.SetSize(button[6],150,50)
+
+  button[7] = Controls.AddButton("炎",250,450)
+  Controls.SetSize(button[7],150,50)
+
+  button[8] = Controls.AddButton("雪の塔",450,450)
+  Controls.SetSize(button[8],150,50)
+  
+  button[9] = Controls.AddButton("爆弾",50,550)
+  Controls.SetSize(button[9],150,50)
+
+  button[10] = Controls.AddButton("火砕流",250,550)
+  Controls.SetSize(button[10],150,50)
+
+  button[11] = Controls.AddButton("滝",450,550)
+  Controls.SetSize(button[11],150,50)
+  hideButton()
+EndSub
+
+Sub OnMouseDown
+  GraphicsWindow.Title = "みつかってしまった。私は運がいい" + GraphicsWindow.MouseX + ":" + GraphicsWindow.MouseY  + " " + MCPI.Version
+EndSub
+
+Sub hideButton
+  For i=1 To 11
+    Controls.HideControl(button[i])
+  EndFor
+EndSub
+
+Sub showButton
+  For i=1 To 11
+    Controls.ShowControl(button[i])
+  EndFor
+EndSub
+
+Sub OnButtonClicked
+  If Controls.LastClickedButton = connect_button Then
+    MCPI.connectRemote("(^^);",Controls.GetTextBoxText(IPADDR))
+    Controls.SetTextBoxText(Tx,MCPI.Px)
+    Controls.SetTextBoxText(Ty,MCPI.Py)
+    Controls.SetTextBoxText(Tz,MCPI.Pz)
+    showButton()
+  Else
+    If Controls.LastClickedButton = button[1] Then
+      Controls.SetTextBoxText(Tx,MCPI.Px)
+      Controls.SetTextBoxText(Ty,MCPI.Py)
+      Controls.SetTextBoxText(Tz,MCPI.Pz)
+    ElseIf Controls.LastClickedButton = button[2] Then
+      MCPI.Px = Controls.GetTextBoxText(Tx)
+      MCPI.Py = Controls.GetTextBoxText(Ty)
+      MCPI.Pz = Controls.GetTextBoxText(Tz)
+    ElseIf Controls.LastClickedButton = button[3] Then
+      MCPI.ExGoToHeaven()
+    ElseIf Controls.LastClickedButton = button[4] Then
+      MCPI.ExIntoTheUnderGroud(4)
+    ElseIf Controls.LastClickedButton = button[5] Then
+      MCPI.ExSpiralStaircase(5,3)
+    ElseIf Controls.LastClickedButton = button[6] Then
+      MCPI.ExIWishATower(1,2,MCPI.BLK_WATER)
+    ElseIf Controls.LastClickedButton = button[7] Then
+      MCPI.ExIWishATower(1,2,MCPI.BLK_LAVA)
+    ElseIf Controls.LastClickedButton = button[8] Then
+      MCPI.ExIWishATower(20,3,MCPI.BLOCK_SNOW_BLOCK)
+    ElseIf Controls.LastClickedButton = button[9] Then
+      MCPI.ExTheWall(3,5,MCPI.BLK_TNT,"x")
+    ElseIf Controls.LastClickedButton = button[10] Then
+      MCPI.ExTheWall(5,10,MCPI.BLK_LAVA,"z")
+    ElseIf Controls.LastClickedButton = button[11] Then
+      MCPI.ExTheWall(1,20,MCPI.BLK_WATER,"x")
+    Else
+    EndIf
+  EndIf
+
+
+EndSub
+
+
