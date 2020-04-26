@@ -1,4 +1,4 @@
-GraphicsWindow.Title = "遠隔操作でちょっかいをだすアプリ for MinecraftPI " 
+GraphicsWindow.Title = "遠隔操作でちょっかいをだすアプリ V2.1 for MinecraftPI " 
 
 InitForm()
 Controls.ButtonClicked=OnButtonClicked
@@ -6,7 +6,7 @@ GraphicsWindow.MouseDown = OnMouseDown
 
 Sub InitForm
   GraphicsWindow.Width = 600
-  GraphicsWindow.Height = 600
+  GraphicsWindow.Height = 650
   GraphicsWindow.FontName = "Segoe UI Symbol"
   GraphicsWindow.FontSize = 20
   GraphicsWindow.CanResize= "False"
@@ -18,7 +18,7 @@ Sub InitForm
 
   IPADDR = Controls.AddTextBox(300,00)
   Controls.SetSize(IPADDR,200,50)
-  Controls.SetTextBoxText(IPADDR,"192.168.0.11")
+  Controls.SetTextBoxText(IPADDR,"192.168.0.65")
   
   connect_button = Controls.AddButton("接続", 500, 00)
   Controls.SetSize(connect_button, 100, 50)
@@ -29,47 +29,94 @@ Sub InitForm
   button[1] = Controls.AddButton("現在座標取得",50,150)
   Controls.SetSize(button[1],150,50)
   
-  Tx = Controls.AddTextBox(200,150)
-  Controls.SetSize(Tx,80,50)
-  Controls.SetTextBoxText(Tx,"999")
+  T1x = Controls.AddTextBox(200,150)
+  Controls.SetSize(T1x,80,50)
+  Controls.SetTextBoxText(T1x,"999")
 
-  Ty = Controls.AddTextBox(290,150)
-  Controls.SetSize(Ty,80,50)
-  Controls.SetTextBoxText(Ty,"0")
+  T1y = Controls.AddTextBox(290,150)
+  Controls.SetSize(T1y,80,50)
+  Controls.SetTextBoxText(T1y,"0")
 
-  Tz = Controls.AddTextBox(380,150)
-  Controls.SetSize(Tz,80,50)
-  Controls.SetTextBoxText(Tz,"99")
+  T1z = Controls.AddTextBox(380,150)
+  Controls.SetSize(T1z,80,50)
+  Controls.SetTextBoxText(T1z,"99")
   
   button[2] = Controls.AddButton("テレポート",450,150)
   Controls.SetSize(button[2],150,50)
-  
-  button[3] = Controls.AddButton("天空へ",50,350)
-  Controls.SetSize(button[3],150,50)
 
-  button[4] = Controls.AddButton("地下迷宮",250,350)
+
+
+  button[3] = Controls.AddButton("現在座標取得",50,200)
+  Controls.SetSize(button[3],150,50)
+  
+  T2x = Controls.AddTextBox(200,200)
+  Controls.SetSize(T2x,80,50)
+  Controls.SetTextBoxText(T2x,"999")
+
+  T2y = Controls.AddTextBox(290,200)
+  Controls.SetSize(T2y,80,50)
+  Controls.SetTextBoxText(T2y,"0")
+
+  T2z = Controls.AddTextBox(380,200)
+  Controls.SetSize(T2z,80,50)
+  Controls.SetTextBoxText(T2z,"99")
+  
+  button[4] = Controls.AddButton("テレポート",450,200)
   Controls.SetSize(button[4],150,50)
 
-  button[5] = Controls.AddButton("螺旋階段",450,350)
+  button[5] = Controls.AddButton("SetBlock",50,250)
   Controls.SetSize(button[5],150,50)
+  
+  T3x = Controls.AddTextBox(200,250)
+  Controls.SetSize(T3x,80,50)
+  Controls.SetTextBoxText(T3x,"46")
 
-  button[6] = Controls.AddButton("噴水",50,450)
+  T3y = Controls.AddTextBox(290,250)
+  Controls.SetSize(T3y,80,50)
+  Controls.SetTextBoxText(T3y,"0")
+
+  T3z = Controls.AddTextBox(380,250)
+  Controls.SetSize(T3z,80,50)
+  Controls.SetTextBoxText(T3z,"42")
+  
+  button[6] = Controls.AddButton("SetBlock",450,250)
   Controls.SetSize(button[6],150,50)
 
-  button[7] = Controls.AddButton("炎",250,450)
+  button[7] = Controls.AddButton("天空へ",50,300)
   Controls.SetSize(button[7],150,50)
 
-  button[8] = Controls.AddButton("雪の塔",450,450)
+  button[8] = Controls.AddButton("地下迷宮",250,300)
   Controls.SetSize(button[8],150,50)
-  
-  button[9] = Controls.AddButton("爆弾",50,550)
+
+  button[9] = Controls.AddButton("螺旋階段",450,300)
   Controls.SetSize(button[9],150,50)
 
-  button[10] = Controls.AddButton("火砕流",250,550)
+  button[10] = Controls.AddButton("砂上の楼閣",50,400)
   Controls.SetSize(button[10],150,50)
 
-  button[11] = Controls.AddButton("滝",450,550)
+  button[11] = Controls.AddButton("炎",250,400)
   Controls.SetSize(button[11],150,50)
+
+  button[12] = Controls.AddButton("雪の塔",450,400)
+  Controls.SetSize(button[12],150,50)
+  
+  button[13] = Controls.AddButton("爆弾",50,500)
+  Controls.SetSize(button[13],150,50)
+
+  button[14] = Controls.AddButton("火砕流",250,500)
+  Controls.SetSize(button[14],150,50)
+
+  button[15] = Controls.AddButton("滝",450,500)
+  Controls.SetSize(button[15],150,50)
+
+  button[16] = Controls.AddButton("1",50,600)
+  Controls.SetSize(button[16],150,50)
+
+  button[17] = Controls.AddButton("2",250,600)
+  Controls.SetSize(button[17],150,50)
+
+  button[18] = Controls.AddButton("3",450,600)
+  Controls.SetSize(button[18],150,50)
   hideButton()
 EndSub
 
@@ -78,55 +125,113 @@ Sub OnMouseDown
 EndSub
 
 Sub hideButton
-  For i=1 To 11
+  For i=1 To 15
     Controls.HideControl(button[i])
   EndFor
+    Controls.HideControl(T1X)
+    Controls.HideControl(T1y)
+    Controls.HideControl(T1z)
+    Controls.HideControl(T2X)
+    Controls.HideControl(T2y)
+    Controls.HideControl(T2z)
+    Controls.HideControl(T3X)
+    Controls.HideControl(T3y)
+    Controls.HideControl(T3z)
 EndSub
 
 Sub showButton
-  For i=1 To 11
+  For i=1 To 15
     Controls.ShowControl(button[i])
   EndFor
+    Controls.ShowControl(T1x)
+    Controls.ShowControl(T1y)
+    Controls.ShowControl(T1z)
+    Controls.ShowControl(T2x)
+    Controls.ShowControl(T2y)
+    Controls.ShowControl(T2z)
+    Controls.ShowControl(T3x)
+    Controls.ShowControl(T3y)
+    Controls.ShowControl(T3z)
 EndSub
 
 Sub OnButtonClicked
   If Controls.LastClickedButton = connect_button Then
     MCPI.connectRemote("(^^);",Controls.GetTextBoxText(IPADDR))
-    Controls.SetTextBoxText(Tx,MCPI.Px)
-    Controls.SetTextBoxText(Ty,MCPI.Py)
-    Controls.SetTextBoxText(Tz,MCPI.Pz)
+    Controls.SetTextBoxText(T1x,MCPI.Px)
+    Controls.SetTextBoxText(T1y,MCPI.Py)
+    Controls.SetTextBoxText(T1z,MCPI.Pz)
+    Controls.SetTextBoxText(T2x,MCPI.Px+1)
+    Controls.SetTextBoxText(T2y,MCPI.Py+1)
+    Controls.SetTextBoxText(T2z,MCPI.Pz+1)
     showButton()
   Else
     If Controls.LastClickedButton = button[1] Then
-      Controls.SetTextBoxText(Tx,MCPI.Px)
-      Controls.SetTextBoxText(Ty,MCPI.Py)
-      Controls.SetTextBoxText(Tz,MCPI.Pz)
+      Controls.SetTextBoxText(T1x,MCPI.Px)
+      Controls.SetTextBoxText(T1y,MCPI.Py)
+      Controls.SetTextBoxText(T1z,MCPI.Pz)
     ElseIf Controls.LastClickedButton = button[2] Then
-      MCPI.Px = Controls.GetTextBoxText(Tx)
-      MCPI.Py = Controls.GetTextBoxText(Ty)
-      MCPI.Pz = Controls.GetTextBoxText(Tz)
-    ElseIf Controls.LastClickedButton = button[3] Then
-      MCPI.ExGoToHeaven()
+      MCPI.Px = Controls.GetTextBoxText(T1x)
+      MCPI.Py = Controls.GetTextBoxText(T1y)
+      MCPI.Pz = Controls.GetTextBoxText(T1z)
+
+    elseIf Controls.LastClickedButton = button[3] Then
+      Controls.SetTextBoxText(T2x,MCPI.Px)
+      Controls.SetTextBoxText(T2y,MCPI.Py)
+      Controls.SetTextBoxText(T2z,MCPI.Pz)
     ElseIf Controls.LastClickedButton = button[4] Then
-      MCPI.ExIntoTheUnderGroud(4)
+      MCPI.Px = Controls.GetTextBoxText(T2x)
+      MCPI.Py = Controls.GetTextBoxText(T2y)
+      MCPI.Pz = Controls.GetTextBoxText(T2z)
+
     ElseIf Controls.LastClickedButton = button[5] Then
-      MCPI.ExSpiralStaircase(5,3)
+      MCPI.SetBlock(MCPI.Px, MCPI.Py , MCPI.Pz ,Controls.GetTextBoxText(T3x)  ,Controls.GetTextBoxText(T3y))
     ElseIf Controls.LastClickedButton = button[6] Then
-      MCPI.ExIWishATower(1,2,MCPI.BLK_WATER)
+      MCPI.TipsOnTheBlock(Controls.GetTextBoxText(T3z) ,Controls.GetTextBoxText(T3y))
     ElseIf Controls.LastClickedButton = button[7] Then
-      MCPI.ExIWishATower(1,2,MCPI.BLK_LAVA)
+      MCPI.ExGoToHeaven()
     ElseIf Controls.LastClickedButton = button[8] Then
-      MCPI.ExIWishATower(20,3,MCPI.BLOCK_SNOW_BLOCK)
+      MCPI.ExIntoTheUnderGroud(Math.GetRandomNumber(4))
     ElseIf Controls.LastClickedButton = button[9] Then
-      MCPI.ExTheWall(3,5,MCPI.BLK_TNT,"x")
+      MCPI.ExSpiralStaircase(Math.GetRandomNumber(5),3)
     ElseIf Controls.LastClickedButton = button[10] Then
-      MCPI.ExTheWall(5,10,MCPI.BLK_LAVA,"z")
+      MCPI.ExIWishATower(20,0,13,0)
     ElseIf Controls.LastClickedButton = button[11] Then
-      MCPI.ExTheWall(1,20,MCPI.BLK_WATER,"x")
+      MCPI.ExIWishATower(1,2,MCPI.BLK_LAVA,0)
+    ElseIf Controls.LastClickedButton = button[12] Then
+      MCPI.ExIWishATower(20,3,MCPI.BLOCK_SNOW_BLOCK,0)
+    ElseIf Controls.LastClickedButton = button[13] Then
+      MCPI.ExTheWall(3,4+Math.GetRandomNumber(5),MCPI.BLK_TNT,Math.GetRandomNumber(2) - 1,"x")
+    ElseIf Controls.LastClickedButton = button[14] Then
+      'MCPI.ExTheWall(5,10,MCPI.BLK_LAVA,0,"z")
+      MCPI.SetBlock(MCPI.Px, MCPI.Py + 1 + Math.GetRandomNumber(10), MCPI.Pz ,MCPI.BLK_LAVA,1)
+    ElseIf Controls.LastClickedButton = button[15] Then
+      'MCPI.ExTheWall(1,20,MCPI.BLK_WATER,1,"x")
+      MCPI.SetBlock(MCPI.Px, MCPI.Py + 5 + Math.GetRandomNumber(20), MCPI.Pz ,MCPI.BLK_WATER,0)
+    ElseIf Controls.LastClickedButton = button[16] Then
+      ax = MCPI.Px
+      ay = MCPI.Py
+      az = mcpi.pz
+      MCPI.SetBlock(ax+1 ,ay +0 ,az ,17 ,0 )
+      MCPI.SetBlock(ax+1 ,ay +1  ,az ,17 ,0 )
+      MCPI.SetBlock(ax+1 ,ay +2 ,az ,17 ,0 )
+      MCPI.SetBlock(ax+1 ,ay +3 ,az ,17 ,0 )
+      MCPI.SetBlock(ax+1 ,ay +4 ,az ,17 ,0 )
+      MCPI.SetBlock(ax+1 ,ay +5 ,az ,17 ,0 )
+
+      MCPI.SetBlock(ax+1 +1 ,ay +6 ,az ,17 ,0 )
+      MCPI.SetBlock(ax+1 -1 ,ay +6 ,az ,17 ,0 )
+      MCPI.SetBlock(ax+1    ,ay +6 ,az + 1,17 ,0 )
+      MCPI.SetBlock(ax+1    ,ay +6 ,az - 1,17 ,0 )
+      MCPI.SetBlock(ax+1    ,ay +6 ,az ,MCPI.BLK_LAVA ,0 )
+    ElseIf Controls.LastClickedButton = button[17] Then
+      MCPI.Printmessage("IntoTheUnknown")
+    ElseIf Controls.LastClickedButton = button[18] Then
+      MCPI.Printmessage("IntoTheUnknown")
+
     Else
+      MCPI.Printmessage("IntoTheUnknown")
     EndIf
   EndIf
-
 
 EndSub
 
