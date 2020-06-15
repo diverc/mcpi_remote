@@ -1,4 +1,4 @@
-GraphicsWindow.Title = "遠隔操作でちょっかいをだすアプリ V2.1 for MinecraftPI " 
+GraphicsWindow.Title = "遠隔操作でちょっかいをだすアプリ V2.2 for MinecraftPI " 
 
 InitForm()
 Controls.ButtonClicked=OnButtonClicked
@@ -109,7 +109,7 @@ Sub InitForm
   button[15] = Controls.AddButton("滝",450,500)
   Controls.SetSize(button[15],150,50)
 
-  button[16] = Controls.AddButton("1",50,600)
+  button[16] = Controls.AddButton("金の生る木",50,600)
   Controls.SetSize(button[16],150,50)
 
   button[17] = Controls.AddButton("2",250,600)
@@ -125,7 +125,7 @@ Sub OnMouseDown
 EndSub
 
 Sub hideButton
-  For i=1 To 15
+  For i=1 To 18
     Controls.HideControl(button[i])
   EndFor
     Controls.HideControl(T1X)
@@ -140,7 +140,7 @@ Sub hideButton
 EndSub
 
 Sub showButton
-  For i=1 To 15
+  For i=1 To 18
     Controls.ShowControl(button[i])
   EndFor
     Controls.ShowControl(T1x)
@@ -223,6 +223,7 @@ Sub OnButtonClicked
       MCPI.SetBlock(ax+1    ,ay +6 ,az + 1,17 ,0 )
       MCPI.SetBlock(ax+1    ,ay +6 ,az - 1,17 ,0 )
       MCPI.SetBlock(ax+1    ,ay +6 ,az ,MCPI.BLK_LAVA ,0 )
+      MCPI.SetBlock(ax+1    ,ay +6 ,az ,6 ,8 )
     ElseIf Controls.LastClickedButton = button[17] Then
       MCPI.Printmessage("IntoTheUnknown")
     ElseIf Controls.LastClickedButton = button[18] Then
